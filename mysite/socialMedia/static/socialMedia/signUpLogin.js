@@ -14,11 +14,17 @@ $("#cancelSignUp").click(function(){
 
 $("#submitSignUp").click(function() {
     //gather info
-    var firstName = $("#signUpFirstName");
-    var lastName = $("#signUpLastName");
-    var email = $("#signUpEmail");
-    var pass = $("#signUpPassword");
+    var firstName = $("#signUpFirstName").val() || null;
+    var lastName = $("#signUpLastName") || null;
+    var email = $("#signUpEmail") || null;
+    var pass = $("#signUpPassword") || null;
     var passCon = $("#signUpPasswordCon");
+
+    //validate info
+    console.log(firstName);
+    if(firstName == null){
+        $("#errorCode")
+    }
     var userData = [firstName, lastName, email, passCon];
     //ajax request to server
     //redirect to home
