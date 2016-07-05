@@ -11,3 +11,15 @@ $("#cancelSignUp").click(function(){
     $("#join1").show();
     $("#main1").show();
 });
+
+$("#submitSignUp").click(function() {
+    //gather info
+    var firstName = $("#signUpFirstName");
+    var lastName = $("#signUpLastName");
+    var email = $("#signUpEmail");
+    var pass = $("#signUpPassword");
+    var passCon = $("#signUpPasswordCon");
+    var userData = [firstName, lastName, email, passCon];
+    //ajax request to server
+    //redirect to home
+});
